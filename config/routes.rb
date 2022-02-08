@@ -9,5 +9,8 @@ Rails.application.routes.draw do
   # rendered.
   get "actors" => "actors#index"
   get "actors/new" => "actors#new"
+  # When a post request is made for the actors URL,
+  # Rails envokes the create method in the actors Ruby controller class
   post "actors" => "actors#create"
+  get "movies" => "movies#index"
 end
