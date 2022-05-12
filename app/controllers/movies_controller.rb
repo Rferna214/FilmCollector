@@ -10,6 +10,7 @@ class MoviesController < ApplicationController
 		@movies = Movie.all
 	end
 
+
 	#new method gets called when the movies/new URL is requested.
 	#new method is mapped to the movies new.html.erb
 	def new
@@ -54,6 +55,10 @@ class MoviesController < ApplicationController
 		# instance variable is available to movies show.html.erb
 		@actors = Movie.find(params[:id]).actors
 		
+	end
+
+	def rating
+		@actors = Movie.find(params[:id]).actors
 	end
 
 	def edit

@@ -1,0 +1,26 @@
+<h1>View <%= pluralize(@movies.count, "Movie Rating") %></h1>
+<table class="table table-striped">
+	<thead>
+		<th>Movie</th>
+	</thead>
+	<tbody>
+		<% @movies.each do |movie| %>
+		<tr>
+			<td value="<%= movie.id %>"><%= movie.title %></td>
+		</tr>
+		<% end %>
+	</tbody>
+</table>
+<table class="table table-striped">
+	<thead>
+		<th>Rating</th>
+	</thead>
+	<tbody>
+		<% @ratings.each do |rating| %>
+		<tr>
+			<td value="<%= rating.id %>"><%= rating.rating %></td>
+		</tr>
+		<% end %>
+	</tbody>
+
+</table>
